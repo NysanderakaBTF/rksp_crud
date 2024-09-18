@@ -21,8 +21,10 @@ public class CategoryService {
         return categoryRepository.findById(id).orElseThrow(() ->
                 new RuntimeException("Category not found - " + id));
     }
-    public Category save(String name){
-	return categoryRepositiry.save(Category.builder().name(name).build());
+    public Category saveEnt(String name){
+	    return categoryRepository.save(
+                Category.builder().name(name).build()
+        );
     }
 
 }

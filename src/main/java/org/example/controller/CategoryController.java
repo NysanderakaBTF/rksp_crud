@@ -27,7 +27,7 @@ public class CategoryController {
 
     @PostMapping
     public ResponseEntity<Category> createNew (@RequestBody String name){
-	return new ResponseEntity<>(categoryService.save(name), HttpStatus.OK);
+	return new ResponseEntity<>(categoryService.saveEnt(name), HttpStatus.OK);
     }
 
 }
